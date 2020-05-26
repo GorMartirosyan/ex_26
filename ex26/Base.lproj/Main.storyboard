@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ex26" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Obb-gl-tFp">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4UF-py-KRm">
+                                    <size key="itemSize" width="160" height="160"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TrackCell" id="V9w-Ob-O8g" customClass="TrackCell" customModule="ex26" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9Jx-VX-fln">
+                                            <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Mt8-Pk-hWt">
+                                                    <rect key="frame" x="70" y="70" width="20" height="20"/>
+                                                </activityIndicatorView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jA0-ho-XyO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="160" id="Dnq-hu-Iin"/>
+                                                        <constraint firstAttribute="width" constant="160" id="had-yW-a1a"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2j-AD-pTH">
+                                                    <rect key="frame" x="65" y="70" width="30" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="2gI-i5-htW"/>
+                                                        <constraint firstAttribute="height" constant="20" id="kgR-tb-zsp"/>
+                                                    </constraints>
+                                                    <color key="tintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <state key="normal" image="playpause.fill" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="playPauseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZjI-tf-jIK"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="jA0-ho-XyO" firstAttribute="top" secondItem="9Jx-VX-fln" secondAttribute="top" id="9dk-VT-ayw"/>
+                                                <constraint firstItem="Mt8-Pk-hWt" firstAttribute="centerX" secondItem="jA0-ho-XyO" secondAttribute="centerX" id="Baj-B8-38p"/>
+                                                <constraint firstItem="q2j-AD-pTH" firstAttribute="centerY" secondItem="jA0-ho-XyO" secondAttribute="centerY" id="HWs-fR-INJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="jA0-ho-XyO" secondAttribute="bottom" id="Xd0-Nq-LRN"/>
+                                                <constraint firstItem="q2j-AD-pTH" firstAttribute="centerX" secondItem="jA0-ho-XyO" secondAttribute="centerX" id="fIW-4f-N9L"/>
+                                                <constraint firstItem="jA0-ho-XyO" firstAttribute="leading" secondItem="9Jx-VX-fln" secondAttribute="leading" id="i0h-De-Bsd"/>
+                                                <constraint firstAttribute="trailing" secondItem="jA0-ho-XyO" secondAttribute="trailing" id="vvZ-7R-VYm"/>
+                                                <constraint firstItem="Mt8-Pk-hWt" firstAttribute="centerY" secondItem="jA0-ho-XyO" secondAttribute="centerY" id="zSg-3K-rVK"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="160" height="160"/>
+                                        <connections>
+                                            <outlet property="imageView" destination="jA0-ho-XyO" id="vnz-a2-v95"/>
+                                            <outlet property="playPauseButton" destination="q2j-AD-pTH" id="yhW-NT-QAb"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Obb-gl-tFp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="C8X-lx-9ha"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Obb-gl-tFp" secondAttribute="trailing" id="CxV-kt-eu3"/>
+                            <constraint firstItem="Obb-gl-tFp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZPr-iT-zv4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Obb-gl-tFp" secondAttribute="bottom" id="jBS-kv-vtE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Obb-gl-tFp" id="4fe-2k-IO0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="playpause.fill" catalog="system" width="128" height="73"/>
+    </resources>
+</document>
